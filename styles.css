@@ -1,0 +1,180 @@
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d5f5e3;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* Уменьшение размера текста */
+    padding: 8px 16px; /* Уменьшение внутреннего отступа */
+    border: none;
+    border-radius: 5px; /* Закругленные углы */
+    background-color: #4CAF50; /* Зеленый цвет фона */
+    color: white; /* Белый цвет текста */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.button:hover {
+    background-color: #45a049; /* Более темный зеленый при наведении */
+}
+
+.register-btn {
+    width: 140px; /* Установить ширину */
+    height: 40px; /* Установить высоту */
+    text-align: center; /* Центрировать текст */
+    margin: 10px; /* Отступы вокруг кнопки */
+    display: inline-block; /* Убедиться, что кнопка отображается корректно */
+    font-size: 14px; /* Размер текста */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    background-color: #4CAF50; /* Зеленый цвет для кнопки Register */
+    color: white; /* Белый цвет текста */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.register-btn:hover {
+    background-color: #45a049; /* Более темный зеленый при наведении */
+}
+
+.login-btn {
+    width: auto; /* Установить ширину автоматически */
+    max-width: 200px; /* Ограничить максимальную ширину */
+    height: auto; /* Установить высоту автоматически */
+    padding: 10px 15px; /* Добавить внутренние отступы */
+    text-align: center; /* Центрировать текст */
+    margin: 10px; /* Отступы вокруг кнопки */
+    display: inline-block; /* Убедиться, что кнопка отображается корректно */
+    font-size: 12px; /* Уменьшить размер текста */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    background-color: #008CBA; /* Синий цвет для кнопки Log in */
+    color: white; /* Белый цвет текста */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+    white-space: nowrap; /* Запретить перенос текста */
+}
+
+.login-btn:hover {
+    background-color: #007bb5; /* Более темный синий при наведении */
+}
+
+.header {
+    background: #006400;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+}
+
+.city-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.city-button {
+    background-color: #85e0a5;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.city-button:hover {
+    background-color: #6ccf8f;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.welcome-message {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Специфические стили для регистрации */
+.registration-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

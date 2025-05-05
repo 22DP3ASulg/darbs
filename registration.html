@@ -5,67 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #d5f5e3;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 300px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .error {
-            color: red;
-            font-size: 12px;
-            display: none;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .login-btn {
-            background-color: #007bff;
-            margin-top: 10px;
-        }
-        .login-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="registration-body">
     <div class="container">
         <h2>Register</h2>
         <form id="registerForm">
@@ -89,66 +31,10 @@
                 <input type="password" id="confirmPassword" required>
                 <span class="error" id="confirmPasswordError">Passwords do not match</span>
             </div>
-            <button type="submit" id="submitBtn" disabled>Register</button>
+            <button type="submit" id="submitBtn" disabled class="button register-btn">Register</button>
         </form>
-        <button class="login-btn" onclick="window.location.href='login.html'">Already have an account? Log in</button>
+        <button class="button login-btn" onclick="window.location.href='login.html'">Already have? Log in</button>
     </div>
-    <script>
-        const username = document.getElementById("username");
-        const email = document.getElementById("email");
-        const password = document.getElementById("password");
-        const confirmPassword = document.getElementById("confirmPassword");
-        const submitBtn = document.getElementById("submitBtn");
-        
-        const usernameError = document.getElementById("usernameError");
-        const emailError = document.getElementById("emailError");
-        const passwordError = document.getElementById("passwordError");
-        const confirmPasswordError = document.getElementById("confirmPasswordError");
-        
-        function validateForm() {
-            let valid = true;
-            
-            if (username.value.trim() === "") {
-                usernameError.style.display = "block";
-                valid = false;
-            } else {
-                usernameError.style.display = "none";
-            }
-            
-            if (!email.value.includes("@") || !email.value.includes(".")) {
-                emailError.style.display = "block";
-                valid = false;
-            } else {
-                emailError.style.display = "none";
-            }
-            
-            if (password.value.length < 6) {
-                passwordError.style.display = "block";
-                valid = false;
-            } else {
-                passwordError.style.display = "none";
-            }
-            
-            if (confirmPassword.value !== password.value || confirmPassword.value === "") {
-                confirmPasswordError.style.display = "block";
-                valid = false;
-            } else {
-                confirmPasswordError.style.display = "none";
-            }
-            
-            submitBtn.disabled = !valid;
-        }
-        
-        username.addEventListener("input", validateForm);
-        email.addEventListener("input", validateForm);
-        password.addEventListener("input", validateForm);
-        confirmPassword.addEventListener("input", validateForm);
-        
-        document.getElementById("registerForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("Registration successful! Redirecting to login...");
-            window.location.href = 'login.html';
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
-</html>
+</html>     
